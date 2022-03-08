@@ -22,7 +22,7 @@
       ],
       "settings": {}
     },
-    "featured-collection": {
+    "featured-products": {
       "type": "featured-collection",
       "settings": {
         "collection": "all",
@@ -33,6 +33,6 @@
   "order": [
     "cart-items",
     "cart-footer",
-    "featured-collection"
+    "featured-products"
   ]
 }

@@ -47,11 +47,6 @@
       "share_url": "Ссылка",
       "success_message": "Ссылка скопирована в буфер обмена.",
       "close": "Свернуть функцию \"Поделиться\""
-    },
-    "slider": {
-      "of": "из",
-      "next_slide": "Листать вперед",
-      "previous_slide": "Листать назад"
     }
   },
   "newsletter": {
@@ -66,15 +61,17 @@
     "vendor": "Продавец:",
     "error": "Ошибка",
     "refresh_page": "Выбор выделенного элемента приводит к полному обновлению страницы.",
+    "next_slide": "Листать вперед",
+    "previous_slide": "Листать назад",
     "loading": "Загрузка…",
     "link_messages": {
       "new_window": "Открывается в новом окне.",
       "external": "Открывает внешний сайт."
     },
+    "of": "из",
     "skip_to_product_info": "Перейти к информации о продукте",
     "total_reviews": "всего отзывов",
-    "star_reviews_info": "{{ rating_value }} из {{ rating_max }} звезд",
-    "collapsible_content_title": "Контент, который можно свернуть"
+    "star_reviews_info": "{{ rating_value }} из {{ rating_max }} звезд"
   },
   "blogs": {
     "article": {
@@ -137,14 +134,10 @@
         "refresh": "Обновить"
       },
       "media": {
-        "open_media": "Открыть медиа-файлы {{ index }} в модальном окне",
+        "open_featured_media": "Открыть рекомендуемые медиа-файлы в режиме галереи",
+        "open_media": "Открыть медиа-файлы {{ index }} в режиме галереи",
         "play_model": "Открыть объемную модель",
-        "play_video": "Воспроизвести видео",
-        "gallery_viewer": "Средство просмотра галереи",
-        "load_image": "Загрузить изображение {{ index }} в средство просмотра галереи",
-        "load_model": "Загрузить трехмерную модель {{ index }} в средство просмотра галереи",
-        "load_video": "Загрузить видео {{ index }} в средство просмотра галереи",
-        "image_available": "Изображение {{ index }} доступно в средстве просмотра галереи"
+        "play_video": "Воспроизвести видео"
       },
       "view_full_details": "Просмотреть всю информацию",
       "include_taxes": "Сумма налога включена.",
@@ -286,15 +279,6 @@
     },
     "video": {
       "load_video": "Загрузить видео: {{ description }}"
-    },
-    "slideshow": {
-      "load_slide": "Загрузить слайд",
-      "previous_slideshow": "Предыдущий слайд",
-      "next_slideshow": "Следующий слайд",
-      "pause_slideshow": "Приостановить показ слайд-шоу",
-      "play_slideshow": "Воспроизвести слайд-шоу",
-      "carousel": "Карусель",
-      "slide": "Слайд"
     }
   },
   "localization": {

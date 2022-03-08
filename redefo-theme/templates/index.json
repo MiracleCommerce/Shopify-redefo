@@ -6,20 +6,72 @@
         "heading": {
           "type": "heading",
           "settings": {
+            "heading": "OPENING PROMOTION Up to 50% off",
             "heading_size": "large"
           }
-        },
-        "text": {
-          "type": "text",
-          "settings": {}
         },
         "button": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": ""
+            "button_link_1": "shopify:\/\/collections\/city2",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CITY4_D.jpg",
+        "image_2": "shopify:\/\/shop_images\/BI_59I_ob1D3A2B1A.jpg",
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "flex-end",
+        "show_text_box": true,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "cover_image": "shopify:\/\/shop_images\/CITY2_AA_ob0C.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=I1onoUu0mC8",
+        "description": "",
+        "full_width": false
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT REDEFO",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a company that produces furniture and creates individual interior aesthetics.<\/p><p>Our goal is an original, unique design line of products, which is created as a result of a modern approach to combining design with the furniture industry.<\/p><p>We create timeless solutions of the highest quality designed for the contemporary reality that surrounds us and, above all, for you - our Clients.<\/p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "SEE THE COLLECTION",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": true
           }
         }
       },
@@ -29,89 +81,293 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "background-1",
+        "full_width": true
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "1638607011ab195d03": {
+      "type": "image-with-text",
       "blocks": {
-        "heading": {
+        "1638607011a96d3d42-0": {
           "type": "heading",
-          "settings": {}
+          "settings": {
+            "heading": "REDEFO SHOWROOM COMING SOON"
+          }
         },
-        "text": {
+        "1638607011a96d3d42-1": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "text": "<p>Soon our furniture will be available to see and buy in<br\/>the Cracow Showroom at Galleria Solvay. This is the first REDEFO brand showroom.<br\/>All the furniture from our offer will be presented there. We want everyone to be able to see, try and choose the right model and its finish. We want everyone to feel the style of elegance and uniqueness with us. We will offer an unrivaled selection of high-end home furnishings.<\/p><p>We are working intensively to provide you with our timeless solutions of the highest quality, designed in the atmosphere of modern reality, as soon as possible.<\/p><p>After several months of work, our Showroom takes the expected shape and slowly turns into a unique place of design. You will see soon...<\/p>"
+          }
+        },
+        "1638607011a96d3d42-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "1638607011a96d3d42-0",
+        "1638607011a96d3d42-1",
+        "1638607011a96d3d42-2"
       ],
       "settings": {
-        "padding_top": 40,
-        "padding_bottom": 0
+        "image": "shopify:\/\/shop_images\/SHOW_3A.jpg",
+        "height": "large",
+        "color_scheme": "accent-1",
+        "layout": "text_first"
       }
     },
-    "featured_collection": {
+    "1638617569e60beaeb": {
+      "type": "rich-text",
+      "blocks": {
+        "163861756999ea9b63-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "MODULES CONFIGURATOR",
+            "heading_size": "h0"
+          }
+        },
+        "163861756999ea9b63-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Use the configurator for the selected product<\/strong><\/p><p>Create the perfect furniture for your home, office or business. Use our furniture configurator, which will allow you to meet all expectations regarding the form of the furniture and its individual ethics.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163861756999ea9b63-0",
+        "163861756999ea9b63-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "1638614488c4d3614d": {
+      "type": "featured-product",
+      "blocks": {
+        "1638614488b8c3ef72-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "subtitle"
+          }
+        },
+        "1638614488b8c3ef72-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "1638614488b8c3ef72-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "body"
+          }
+        },
+        "1638614488b8c3ef72-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "1638614488b8c3ef72-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "1638614488b8c3ef72-5": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "1638614488b8c3ef72-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "1638614488b8c3ef72-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "1638614488b8c3ef72-0",
+        "1638614488b8c3ef72-1",
+        "1638614488b8c3ef72-2",
+        "1638614488b8c3ef72-3",
+        "1638614488b8c3ef72-4",
+        "1638614488b8c3ef72-5",
+        "1638614488b8c3ef72-6",
+        "1638614488b8c3ef72-7"
+      ],
+      "settings": {
+        "product": "city2-m2",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
+    },
+    "163860532182a204c2": {
+      "type": "collage",
+      "blocks": {
+        "16386053214146e842-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "city2",
+            "image_padding": false,
+            "color_scheme": "accent-1"
+          }
+        },
+        "f6f230ca-463a-4ec4-b1f1-db24fe6c11d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/City_2O1ob4a.jpg",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "4cfa4e4d-e563-4835-9757-d709feaf1991": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/MODULY_3A00A.jpg",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Jg0EH_FDKWY&t=11s",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        }
+      },
+      "block_order": [
+        "16386053214146e842-2",
+        "f6f230ca-463a-4ec4-b1f1-db24fe6c11d7",
+        "4cfa4e4d-e563-4835-9757-d709feaf1991"
+      ],
+      "settings": {
+        "heading": "CITY2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "16386022063f090909": {
+      "type": "video",
+      "settings": {
+        "heading": "MEET OUR INSPIRATIONS FOR CITY2",
+        "cover_image": "shopify:\/\/shop_images\/CITY2_1CBA.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=tp0SoHpq1Wk&t=26s",
+        "description": "",
+        "full_width": false
+      }
+    },
+    "16386085613caed5e0": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "163860856152d37deb-0": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "163860856152d37deb-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "163860856152d37deb-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9b59aa42-eac9-4d3a-a258-28c33a5126b4": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "163860856152d37deb-0",
+        "163860856152d37deb-1",
+        "163860856152d37deb-2",
+        "9b59aa42-eac9-4d3a-a258-28c33a5126b4"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "featured_products": {
       "type": "featured-collection",
       "settings": {
         "title": "Featured products",
-        "collection": "all",
-        "products_to_show": 8,
+        "collection": "city",
+        "products_to_show": 4,
         "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
         "show_secondary_image": true,
-        "padding_top": 28
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {}
-        },
-        "product": {
-          "type": "product",
-          "settings": {}
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {}
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": ""
-      }
-    },
-    "multicolumn": {
+    "multi_column": {
       "type": "multicolumn",
       "blocks": {
         "column1": {
           "type": "column",
-          "settings": {}
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_MMWA61A_ob0.jpg",
+            "title": "MM 6C INDUSTRY COLLECTION",
+            "text": "<p>A characteristic element of the <strong>MM 6C<\/strong> line are fronts with an asymmetrically located opening, fixed in a seemingly disordered manner. Buildings consisting of several such modules become an extraordinary and dominant element in the interior. You can<br\/>adjust it to your own preferences and the character of the interior by selecting the appropriate material and utility variant. MM<br\/>6C bookcases have been designed to create a home day zone, offices, office zones as well as public utility areas, e.g. hotel receptions, cafes, chillout zones, galleries, boutiques.<br\/><\/p>",
+            "link_label": "COMMING SON",
+            "link": ""
+          }
         },
         "column2": {
           "type": "column",
-          "settings": {}
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ANDARO_M.jpg",
+            "title": "CITY CHESTS OF DRAWERS AND FUNCTIONAL ART",
+            "text": "<p><strong>The CITY<\/strong> series is a combination<br\/>of high-quality workmanship, modern design and refined technological solutions. The individual modules work together to create a harmonious development and allow for the creation of unique arrangements of prestigious offices or home day zones. The arrangement of the bookcase can be done using a simple configurator for the arrangement of modules and their functional variants. <\/p>",
+            "link_label": "COMMING SON",
+            "link": ""
+          }
         },
         "column3": {
           "type": "column",
-          "settings": {}
+          "settings": {
+            "image": "shopify:\/\/shop_images\/S27Z_ob2.jpg",
+            "title": "CITY COMPACT WARDROBE",
+            "text": "<p><strong>THE CITY COMPACT WARDROBE <\/strong>is a<br\/>comprehensive solution for both private<br\/>residential and office zones, as well as an<br\/>excellent offer of display solutions for<br\/>commercial spaces, shops, boutiques, etc.<br\/>The system offer of modules allows us to<br\/>fully meet the needs of creating creative<br\/>solutions for the wardrobe zone that meet<br\/>the functional and aesthetic requirements<br\/>of our Customers.<\/p>",
+            "link_label": "COMMING SON",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -120,20 +376,28 @@
         "column3"
       ],
       "settings": {
-        "title": "",
-        "image_width": "third",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": ""
+        "title": "COMING SOON IN OUR STORE",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
     "video",
-    "multicolumn"
+    "rich_text",
+    "1638607011ab195d03",
+    "1638617569e60beaeb",
+    "1638614488c4d3614d",
+    "163860532182a204c2",
+    "16386022063f090909",
+    "16386085613caed5e0",
+    "featured_products",
+    "multi_column"
   ]
 }
