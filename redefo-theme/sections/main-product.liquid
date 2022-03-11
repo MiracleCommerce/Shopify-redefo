@@ -494,7 +494,7 @@
     const SayduckWidgetWrapper = document.getElementById("sayduck-3d-viewer-container");
     if(SayduckWidgetWrapper){
       let SayduckVariantUUIDS = JSON.parse(document.getElementById("sayduck-variant-ids").textContent);
-      document.addEventListener("sayduck.configurator.selectedConfigurationUpdated", (e) => console.log(e.target), false);
+      document.addEventListener("sayduck.configurator.selectedConfigurationUpdated", (e) => console.log(e.detail), false);
       document.querySelector("[name='id']").addEventListener('change', (e)=>{
         let newSelectedVariantId = e.currentTarget.value, 
             newSayduckVariantUuids = SayduckVariantUUIDS[newSelectedVariantId];
