@@ -501,6 +501,7 @@
       return (msie > 0 || trident > 0);
     }
 
+    // Script for making the variant selector interact with Sayduck viewer widget
     const SayduckWidgetWrapper = document.getElementById("sayduck-3d-viewer-container");
     if(SayduckWidgetWrapper){
       let SayduckVariantUUIDS = JSON.parse(document.getElementById("sayduck-variant-ids").textContent);

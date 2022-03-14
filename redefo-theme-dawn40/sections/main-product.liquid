@@ -189,6 +189,41 @@
 
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+          {%- when 'sayduck3d' -%}
+            {% if product.metafields.sayduck.product-uuid != blank and block.settings.enable_sayduck_viewer %}
+              <div class="sayduck-widget__wrapper"> 
+                <div id="sayduck-3d-viewer-container" style="min-height:450px;min-width:300px;width:100%;height:100%;" 
+                    data-product-uuid="{{product.metafields.sayduck.product-uuid}}"
+                    data-viewer-options='{
+                      {%- if product.selected_or_first_available_variant.metafields.sayduck.variant_uuids != blank -%}
+                        "configurations":{
+                          "initial": {{product.selected_or_first_available_variant.metafields.sayduck.variant_uuids}}
+                        }
+                      {%- endif -%}
+                    }'></div>              
+                <script type="text/javascript" src="https://viewer.sayduck.com"></script>
+                <style>#sayduck-3d-viewer-container * :empty{display: initial;}</style>
+              </div>
+              <script type="application/json" id="sayduck-variant-ids">
+                {%- for variant in product.variants -%}
+                  {%- if forloop.first -%}
+                    {%- assign variant_sayduck_ids = variant_sayduck_ids | append: '{' | strip -%}
+                  {%- endif -%}
+                  
+                  {%- if variant.metafields.sayduck.variant_uuids != blank -%}
+                    {%- assign variant_sayduck_ids = variant_sayduck_ids | append: '"'| append: variant.id | append: '":' | append: variant.metafields.sayduck.variant_uuids | strip-%}
+                  {%- else -%}
+                    {%- assign variant_sayduck_ids = variant_sayduck_ids | append: '"' | append: variant.id | append: '":' | append: '""' | strip -%}
+                  {%- endif -%}
+                  {%- if forloop.last -%}
+                    {%- assign variant_sayduck_ids = variant_sayduck_ids | append: '}' -%}
+                  {%- else -%}
+                    {%- assign variant_sayduck_ids = variant_sayduck_ids | append: ',' -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                {{- variant_sayduck_ids | strip -}}
+              </script>
+            {% endif %}
           {%- when '@app' -%}
             {% render block %}
           {%- when 'text' -%}
@@ -321,14 +356,25 @@
                         <legend class="form__label">{{ option.name }}</legend>
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
+                          name="{{ option.name }}"
+                          value="{{ value | escape }}"
+                          form="{{ product_form_id }}"
+                          {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          {%- comment -%}Add option swatch images{%- endcomment -%}
+                          {%- assign swatch_metafield_key = value | handle -%}
+                          {% if shop.metafields.product_swatch[swatch_metafield_key] %}
+                            {%- assign is_swatch = true -%}
+                            {%- assign swatch_image = shop.metafields.product_swatch[swatch_metafield_key].value |split: 'files/' | last | file_img_url -%}
+                          {% endif %}
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            {%- if is_swatch -%}
+                              class="option_swatch" style="background-image: url('{{swatch_image}}')"
+                            {%- endif -%}
+                          >
                             {{ value }}
                           </label>
+                          {%- assign is_swatch = false -%}
                         {%- endfor -%}
                       </fieldset>
                   {%- endfor -%}
@@ -575,6 +621,24 @@
       return (msie > 0 || trident > 0);
     }
 
+    // Script for making the variant selector interact with Sayduck viewer widget
+    const SayduckWidgetWrapper = document.getElementById("sayduck-3d-viewer-container");
+    if(SayduckWidgetWrapper){
+      let SayduckVariantUUIDS = JSON.parse(document.getElementById("sayduck-variant-ids").textContent);
+      document.addEventListener("sayduck.configurator.selectedConfigurationUpdated", (e) => console.log(e.detail), false);
+      document.querySelector("[name='id']").addEventListener('change', (e)=>{
+        let newSelectedVariantId = e.currentTarget.value, 
+            newSayduckVariantUuids = SayduckVariantUUIDS[newSelectedVariantId];
+        window.dispatchEvent(
+          new CustomEvent(
+            'sayduck.configurator.actions.updateSelectedConfiguration', {
+              detail: newSayduckVariantUuids
+            }
+          )
+        );
+      });
+    }
+
     if (!isIE()) return;
     const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
     const noScriptInputWrapper = document.createElement('div');
@@ -647,6 +711,17 @@
   "tag": "section",
   "class": "section",
   "blocks": [
+    {
+      "type":"sayduck3d",
+      "name":"Sayduck 3D viewer", 
+      "settings":[
+        {
+          "type":"checkbox", 
+          "id":"enable_sayduck_viewer",
+          "label":"Enable Sayduck 3d viewer"
+        }
+      ]
+    },
     {
       "type": "@app"
     },
