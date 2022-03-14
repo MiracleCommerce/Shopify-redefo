@@ -75,8 +75,7 @@
           {%- case block.type -%}
           {%- when 'sayduck3d' -%}
             {% if product.metafields.sayduck.product-uuid != blank and block.settings.enable_sayduck_viewer %}
-              <div class="sayduck-widget__wrapper">
-                
+              <div class="sayduck-widget__wrapper"> 
                 <div id="sayduck-3d-viewer-container" style="min-height:450px;min-width:300px;width:100%;height:100%;" 
                     data-product-uuid="{{product.metafields.sayduck.product-uuid}}"
                     data-viewer-options='{
@@ -246,9 +245,20 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          {%- comment -%}Add option swatch images{%- endcomment -%}
+                          {%- assign swatch_metafield_key = value | handle -%}
+                          {% if shop.metafields.product_swatch[swatch_metafield_key] %}
+                            {%- assign is_swatch = true -%}
+                            {%- assign swatch_image = shop.metafields.product_swatch[swatch_metafield_key].value |split: 'files/' | last | file_img_url -%}
+                          {% endif %}
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            {%- if is_swatch -%}
+                              class="option_swatch" style="background-image: url('{{swatch_image}}')"
+                            {%- endif -%}
+                          >
                             {{ value }}
                           </label>
+                          {%- assign is_swatch = false -%}
                         {%- endfor -%}
                       </fieldset>
                   {%- endfor -%}
