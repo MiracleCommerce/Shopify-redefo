@@ -1,0 +1,7 @@
+development:
+  password: shptka_341efc47d884f293614b822057b54115
+  theme_id: 131382575360
+  store: redefo.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+  timeout: 3000s
